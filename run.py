@@ -16,11 +16,12 @@ import string
 start_with_HDC_url = True # Turn on if you have a URL from Harvard Digital Collections to enter
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990058808400203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941'
-HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990004541160203941'
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990004541160203941'
 # HDC_url = 'http://digitalcollections.library.harvard.edu/catalog/fun00001c00689'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990033211010203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941'
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
 # HDC_url = input("Paste URL from Harvard Digital Collections: ")
 manual_pagination = False
 manual_page_start = 1 #

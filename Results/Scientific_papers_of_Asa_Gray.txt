@@ -3676,22 +3676,41 @@ a protoplasmic coating ; and that these spores will not develop
 nor hardly acquire a cell-wall unless so fertilized. His 
 experiments upon dioecious species are perfectly decisive 
 upon these points. He observed the lively spermatozoids 
-playing over the surface of the still naked spore, fix them- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:29:17 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+playing over the surface of the still naked spore, fix them- 
+selves to it by the ciliated end, apparently by one of the 
+cilia, and at length come to rest in contact with it ; but he 
+could not detect any material penetration of them into the 
+body of the spore. Pringsheim, confirming all Thuret's observations, 
+thinks also that the spermatozoids actually penetrate 
+the sperm-mass ; but there is no direct proof of it. 
+Indeed Thuret, in a very recent article (" Annales des Sciences 
+Naturelles," 4 ser., vii., 1857), indicates the grounds of 
+Pringsheim's probable mistake. The most interesting point in 
+this last article by Thuret relates to the suddenness with which 
+the cell-membrane is formed on the spore of Fucus after the 
+access of the spermatozoids and the accomplishment of the act 
+of fecundation. In six or eight minutes traces of the formation 
+of the membrane are recognizable upon a considerable 
+number of the spores. In ten minutes the presence of a membrane 
+may be clearly made manifest by the application of 
+chloride of zinc. In an hour the membrane has acquired considerable 
+firmness and thickness, and the presence of cellulose 
+is revealed by the action of sulphuric acid and iodine ; an 
+hour later and the blue coloration under the test is decided. 
+In the higher Cryptogamia and in the Phanerogamia, 
+Radlkofer's treatise, though interesting for the history, offers 
+nothing new to our readers. In fact, its date precluded it 
+from containing much of what is referred to in the preceding 
+paragraphs. But the subject is still to be continued. 
+DR. HOOKER ON THE BALANOPHOREÆ. 
+Although read before the Linnasan Society nearly three 
+years ago, this fine memoir 1 was published only last summer. 
+The delay has probably been owing, in a great part, to the 
+time requisite for the engraving of the very beautiful and 
+1 On the Structure and Affinities of Balanophorem, by J. D. Hooker, (separately 
+issued from the Transactions of the Linnwan Society of London, 
+xxii.) London, 1857. (American Journal of Science and Arts, 2 ser., 
+xxv. 110.) 
 elaborate plates which illustrate the memoir. It is a clear, 
 patient, and philosophical elucidation of an extremely anomalous 
 o'roup of plants, and a succinct exposition of the principal 
@@ -6521,22 +6540,45 @@ terminal leaflet), which forms the inner side of the end of the
 book, is the most sensitive part ; and this portion is manifestly 
 best adapted to catch distant supports. To show the difference 
 in sensibility, I gently placed loops of string of the same 
-Weight (in one instance weighing .82 of a grain) on the sev- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:50:19 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+Weight (in one instance weighing .82 of a grain) on the sev- 
+eral lateral and on the terminal sub-petioles ; in a few hours 
+the latter were bent, but after 24 hours no effect was produced 
+on any of the lateral petioles. Again, a terminal sub-petiole 
+placed in contact with a thin stick became sensibly curved in 
+45 minutes, and in 1 hour 10 minutes had moved through 
+ninety degrees, whereas a lateral petiole did not become sensibly 
+curved until 3 hours and 30 minutes had elapsed. In 
+this latter case, and in all other such cases, if the sticks be 
+taken away, the petioles continue to move during many hours 
+afterward ; so they do after a slight rubbing ; but ultimately, 
+if the flexure has not been very great or long-continued, they 
+become, after about a day's interval, straight again." — (p. 31.) 
+In numerous cases, notably in Solatium jasminoides, the 
+petiole when clasped increases very greatly in thickness and 
+rigidity, undergoing a change in its woody structure by which 
+the fibro-vascular bundles, originally semi-lunar in cross-section, 
+develop into a closed ring, like that of an exogenous 
+stem. 
+Bophospermum scandens of the gardens climbs, like its 
+allies Maurandia and Rhodochiton, by clasping petioles ; but 
+in this plant, alone, the young internodes are also sensitive to 
+the touch. 
+" When a petiole clasps a stick, it draws the base of the 
+internode against it ; and then the internode itself bends 
+toward the stick, which is thus caught between the stem and 
+the petiole as by a pair of pincers. The internode straightens 
+itself again, excepting the part in contact with the stick. 
+Young internodes alone are sensitive, and these are sensitive 
+on all sides along their whole length. I made fifteen trials 
+by lightly rubbing two or three times with a thin twig several 
+internodes ; and in about 2 hours, but in one case in 3 hours, 
+all became bent ; they became straight again in about 4 hours, 
+subsequently. An internode, which was rubbed as much as 
+six or seven times with a twig, became just perceptibly curved 
+in 1 hour 15 minutes, and subsequently in 3 hours the curvature 
+increased much ; the internode became straight again in 
+the course of the night. I rubbed some internodes one day on 
+one side, and the next day on the opposite side or at right 
 angles ; and the curvature was always toward the rubbed 
 side." 
 Here, then, is one case in which the sensibility of a stem is 
@@ -7560,22 +7602,45 @@ the stigmatic surface being the moist and glutinous
 lining of a stylar tube, which extends downward nearly to the 
 cells of the ovary and even communicates directly with them. 
 As soon as it became evident that fertilization must depend 
-upon nocturnal insects, it was found that they were most fre- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:50:30 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+upon nocturnal insects, it was found that they were most fre- 
+quently and regularly visited by " white moths, which, usually 
+in pairs, disported in the open flowers at dusk, and were found 
+quietly ensconced in them when closed in the day-time." 
+Professor Eiley of St. Louis, the distinguished entomologist, 
+was at this point associated with Dr. Engelmann in the investigation. 
+The result has been given to the scientific world in 
+his interesting memoir on Pronuba yuccasella, first read at 
+the Dubuque meeting of the American Association for the 
+Advancement of Science, in August, 1872, and now also published, 
+as a sequel to Dr. Engelmann's monograph, in the 
+"Transactions of the St. Louis Academy." 
+"The rootstock of all the Yuccas is, under the name of 
+' Amole,' an important article in a Mexican household, being 
+everywhere used as a substitute for soap, as it is replete with 
+mucilaginous and saponaceous matter, probably a substance 
+analogous to the saponine of the Saponaria root. It is curious 
+to learn that the negroes of the coast of South Carolina 
+repeatedly destroyed Dr. Mellichamp's carefully observed 
+clumps of Yuccas, in order to obtain the saponaceous rootstock." 
+In Colorado Territory we found that Yucca angustifolia 
+is as generally called " Soap-plant " as is the Chlorogalum 
+in California. 
+While the nature of the fruit, whether capsular or baccate, 
+is a tribal character in Eiliaccce generally, Yucca has both 
+kinds ; and Dr. Engelmann turns this character, with accompanying 
+differences in seeds, to good account in the systematic 
+arrangement of the species. The common " Spanish bayonet," 
+Y. aloifolia of the Southern States, and some related Texan 
+and Mexican species, represent the pulpy - fruited section ; 
+Y. brevifolia, which ranges across the Arizonian border of 
+the United States, has a spongy indehiscent pod, probably at 
+first more or less drupaceous ; while the Bear-Grass, Y. filamentosa, 
+and its allies bear a dry capsule. It may here be 
+recorded that the name Y. canaliculata of Hooker must replace 
+that of Y. Treculiana of Carriere, the latter being a 
+name published without characters, in 1858, the former described 
+and figured in 1860, in the " Botanical Magazine." 
+The prince of Yuccas must be Yucca baccata, which, in its 
 variety australis, forms " trees twenty-five to thirty feet high, 
 and two or three feet in diameter, with ten or a dozen 
 branches," or sometimes reaches to even fifty feet of elevation 
@@ -9182,22 +9247,45 @@ It is this kind of arrangement for cross-breeding to which
 Various Contrivances by ivhich Orchids are Fertilized by Insects. Second 
 Edition revised. — The Effects of Cross and Self -Fertilization in the Vegetable 
 Kingdom. By Charles Darwin. London and New York, 1876-77. 
-(The Nation, No. 667, April 11, 1878.) <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:50:40 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+(The Nation, No. 667, April 11, 1878.) 
+the larger part of Darwin's latest volume on " The Different 
+Forms of Flowers on Plants of the Same Species " is devoted. 
+In such flowers — and they are rather numerous and of many 
+families — the advantage of cross-breeding between different 
+individuals of the same species is unquestionable, for it is 
+essential to full fertility. The differences in structure, which 
+consist of relative and reciprocal length of stamens and style 
+in blossoms otherwise alike, have long been known ; the meaning 
+of it was one of Darwin's happy thoughts, and the confirmation 
+is due to his labors. He demonstrated that the 
+structure was correlated to the transport by insects of the 
+pollen of the one sort to the stigma of the other, and that each 
+pollen was inert, or nearly so, upon the stigma of the flower 
+it belonged to, but potent upon the stigma of the other sort, 
+upon which, in passing from blossom to blossom among the 
+plants (of about equal number as to sort), the visiting insects 
+are pretty sure to deposit it. 
+It is noteworthy that this significant dimorphism belongs to 
+certain species of a considerable number of natural families, 
+while others, sometimes even of the same genus, and in most 
+of their species, show no trace of it; as if certain favored 
+species had acquired a peculiarity in which their brethren have 
+not shared. We ourselves call to mind some species in which 
+this acquisition is either incipient or the correlations imperfect. 
+But in his earliest work of the present series, on " The Various 
+Contrivances by which Orchids are Fertilized by Insects," 
+— a fascinating volume, which has recently been brought out 
+in a second edition, — the " contrivances," as they may well be 
+termed, are the common property of the whole order, although 
+each genus seems to have patented a modification of its own. 
+Here there is no dimorphism, but (with rare exceptions) all 
+the flowers are alike, and all agree in having the pollen placed 
+tantalizingly near the stigma, but prevented from reaching 
+it, as well as in having some arrangement for the pollen's 
+being transported by insects from one flower to another, ultimately 
+from one plant to another. Wonderful arrangements, 
+indeed, they are, which it requires a volume to describe, and 
+of which we can here offer no details. Suffice it to say that, 
 in this great order, cross-fertilization must be all but universal 
 as between different flowers of the same plant, and commonly 
 between different individual plants. 
@@ -10539,22 +10627,46 @@ really successful. The next thing is to assign characters, and
 here comes the difficulty. Absolute characters of the lead- 
 1 Contributions to American Botany, IX. By Sereno Watson ; Proc. 
 American Academy of Arts and Sciences. Boston, 1879. (American 
-Journal of Science and Arts, 3 ser., xviii. 313.) <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:50:47 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+Journal of Science and Arts, 3 ser., xviii. 313.) 
+WATSON ON NORTH AMERICAN LILIACEM. 279 
+ing groups are not to be had, even wdien North American 
+forms only are considered. Those who imagine they could do 
+better than Mr. Watson has done should make trial before 
+they criticise. The character of the pericarp, whether baccate 
+or capsular, the nature of the stock, whether bulbous, 
+tuberous, or rhizomatous, the nature of the seed-coat, the 
+inflorescence, direction of anthers, union or separation of 
+styles, are all good characters to a certain extent, and all fail 
+to furnish unexceptionable marks to distinguish the higher 
+groups when natural associations are sought. It is not easy 
+to ascertain what diagnostic characters in this monograph are 
+most to be trusted. But the nature of the bracts (on the one 
+hand scarious, on the other foliaceous or none) takes the lead 
+in the first two series, and is followed by the persistence or 
+deciduousness of the perianth, the insertion of the stamens 
+whether on the perianth or at its base, the dehiscence of capsule, 
+— all matters of little physiological importance, but for 
+that reason perhaps surer guides to affinity than the more 
+prominent adaptive characters. However, it may be said that 
+the first series answers to the Asphodeleai, with Yucca and 
+Hemerocallidem added ; the second to the true Tiliacem, with 
+Uvulariem and Trilliem added ; the third to Melanthacem, 
+with the tribe Tofieldiem appended. Thus disposed, it is 
+doubtless judicious to designate the three primary groups as 
+" series," and not as suborders, and to throw the stress upon 
+the tribes. 
+The Mdanthaceous series, which in our view best divides 
+into the Colchicem, Veratrem, and Tofieldiem, — the first not 
+American, — is here divided into the Veratrem, Ifeloniem, and 
+SKerophyllem (which two we should combine), into the midst 
+of which the Tofieldiem are intercalated. This last tribe, 
+which should end the series, is quite exceptional, and is well 
+composed of Tofieldia, Bleea, and Narthecium. Its marks are 
+the equitant leaves, introrse anthers with parallel cells, and 
+caudate seeds ; but to bring Narthecium under the remaining 
+character of " styles distinct or none," it is defined as 
+destitute of style, but with " the slightly lobed stigma sessile 
+upon the attenuated apex of the ovary." This is really much 
 nearer the fact than would be supposed, as the cells of the 
 ovary actually do taper up into the subulate style (as it has 
 always and most naturally been termed), so that in the mature 
@@ -18209,22 +18321,45 @@ and travels, etc., and many smaller contributions to this flourishing institutio
 of which he was president for more than twenty years, Mr. Maclure 
 presented to it, in the latter part of his life, the sum of twenty 
 thousand dollars. See Dr. Morton's " Memoir of William Maclure," 
-Philadelphia, 1841. <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:51:33 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+Philadelphia, 1841. 
+there was no demand for them ; and our diligent attempt to 
+find a sino-le copy in the public and private libraries of three 
+of our largest cities has proved entirely unsuccessful. 
+The foundation of the North American Sylva was laid by 
+the laborious researches of the elder Michaux ; who, under 
+the auspices of the French government, devoted ten years, 
+from 1785 to 1796, to a thorough exploration of the country, 
+from the sunny, sub-tropical groves of Florida to the cold 
+and inhospitable shores of Hudson's Bay ; repeatedly visiting 
+nearly all the higher peaks and deepest recesses of the Alleghany 
+Mountains, and extending his toilsome journeys westward 
+to the prairies of Illinois and the banks of the Mississippi. 
+He had formed indeed, and was only prevented by 
+untoward circumstances from executing, a plan — - more hardy 
+than we can well conceive at this late day — for ascending 
+the Missouri to its sources, and crossing the mountains into 
+the then untrodden but now litigated country on the Oregon. 
+The curious reader will find an extract from his private diary 
+in the " American Journal of Science and Arts " for January, 
+1842 ;a; a showing that he had laid his plans and proposals upon 
+this subject before Mr. Jefferson, who was then Secretary of 
+State. The papers submitted by him may have suggested the 
+scheme of the national expedition of discovery, soon afterwards 
+ordered by Jefferson, and nobly carried into effect by 
+Lewis and Clarke. 
+Soon after his return to France, and the year before he 
+fell a victim to scientific zeal upon the coast of Madagascar, 
+the elder Michaux published his History of North American 
+Oaks; 2 which may be deemed the nucleus of the more comprehensive 
+work subsequently published by his son. The 
+younger Michaux accompanied his father in the earlier portion 
+of his travels, through South Carolina, Georgia, and 
+Florida ; but he afterwards returned to Europe. Revisiting 
+this country in the autumn of 1801, and passing the winter 
+in South Carolina, he traveled, during the following season, 
+1 Vol. xlii. p. 7. 
+2 " Histoire des Chenes de l'Amenque Septentrionale." Par A. Michaux. 
+Paris, 1801. 1 vol. fol. 
 from New York, across the mountains in Pennsylvania, to the 
 Ohio, and carefully explored the States of Kentucky and Tennessee 
 ; thence, recrossing the mountains in North Carolina to 
@@ -20023,22 +20158,46 @@ attained ; " For," says he, " if we suppose that the inscriptions
 were engraven even in the early years of these trees, and that 
 1 See Alphonse De Candolle, in " Bibl. Univ.," xlvi. p. 389. (Aug. 
 Pyr. De Candolle, Phys. Veg., ii. p. 1003. Moquin-Taiidon, Teratol. Veg 
-p. 107.) <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:51:44 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+p. 107.) 
+they have grown to six feet in diameter in the course of two 
+centuries, we may calculate how many centuries they would 
+require to attain the full diameter of twenty-five feet." a Soon 
+afterwards, Adanson communicated to the Royal Academy of 
+Sciences of Paris a full account of the Baobab ; which was 
+published in the volume of Memoirs of that society for the 
+year 1761 ; and, lastly, he wrote the article " Baobab " for the 
+supplement to the great French Encyclopaedia, published in 
+the year 1776. These accounts, although more detailed, embody 
+no essential additions to what has already been given. 
+He says that the trees in question were two in number, upon 
+the bark of which the names of Europeans were engraved, 
+with dates, some posterior to the year 1600 ; and others, as 
+far back as 1555, were probably the work of those who accompanied 
+Thevet, who, in his voyage to antarctic lands, saw 
+some of these trees that same year. 2 Some of the dates appeared 
+to be anterior to 1500, but these were somewhat equivocal. 
+Neglecting, therefore, the indistinct dates in the fourteenth 
+century, continues Adanson, and even allowing that 
+the inscriptions were made when the trees were very young, 
+which is highly improbable, as they occupied less than an 
+eighth of the entire circumference, it is evident, that, if the 
+Baobab has attained six feet in diameter between 1555 and 
+1749, that is, in two hundred years, it would require more 
+than eight centuries to attain the diameter of twenty-five feet, 
+supposing the growth to continue at a uniform rate. But 
+Adanson goes on to say that trees grow the more slowly as 
+they advance in age ; so that such an estimate would fall 
+1 "Voyage au Stfndgal," Paris, 1757, p. 66. 
+2 " Aupres du promontoire Verd, y a trois petites isles prochaines de 
+terre ferme, autres que celles, que nous appellos Isles de Cap Verd, dont 
+nous parlerons cy apres, assez belles, pour les beaux arbres, qu'elles 
+produissent ; toutesfois elles ne sont habite'es. ... En I'une de ces isles 
+se trouve un arbre, lequel porte feuilles semblables a celles de noz 
+figuiers ; le fruit est log de deux pieds on enviro, et gros en proportion," 
+etc. (Thevet, " Singularity de la France Antarctique ; " Anvers, 1558, 
+p. 18.) Thevet proceeds to describe the fruit, its edible character, its 
+furnishing food for monkeys, etc., so as to leave no doubt as to its being 
+a Baobab. 
 below the truth. As to its rate of growth when young, he 
 states that the tree acquires the diameter of an inch or an 
 inch and a half in the first year ; the diameter of a foot in ten 
@@ -22249,22 +22408,147 @@ viii. p. 370, not of Kunth and BoucheA It appears from a note by Vatke, in "Bot.
 717, that S. hederacea is identical with the Tasmanian S. humilis, and its nutlets were originally 
 described as eehinulate-tuberculate, and by implication wingless. So our plant may be named 
 in honor of Dr. S. W. Williams, who first collected a little of it at Simoda, Japan. Better and 
-fruiting specimens were gathered on the Loo-Choo Islands, by Charles Wright. <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:51:55 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
+fruiting specimens were gathered on the Loo-Choo Islands, by Charles Wright. 
+Abies Canadensis. 
+Abies Mertensiana. 
+Thuja gigantea, etc. 
+Abies Tsuga and diversifolia. 
+Thuja Japonica. 
+(Glyptostrobus heterophyllus. ) 
+Cupressus pisifera, obtusa, etc. 
+Thuja occidentalis. 
+Taxodium distichum. 
+Cupressus (Chamaecyparis) 
+thuyoides. 
+Taxus Canadensis. 
+C. Nutkaensis. 
+Taxus brevifolia. 
+Torreya Californica. 
+Taxus cuspidata. 
+Torreya nucif era and grandis. 
+Arisaema, 9 spp. 
+Symplocarpus fcetidus ? and Lysichiton 
+Camtschatcense. 
+(Listera Japonica, etc.) 
+(Arethusa Japonica.) 
+Pogonia ophioglossoides. 
+(Microstylis Japonica.) 
+Liparis liliifolia ? 
+(Cypripedium Japonieum.) 
+Habenaria fucescens. 
+Torreya taxif olia. 
+Arisaama, 3 spp. 
+Symplocarpus fcetidus. 
+(Lysichiton 
+cense.) 
+Camtschat- 
+Listera australis. 
+Arethusa bulbosa. 
+Pogonia ophioglossoides. 
+Microstylis ophioglossoides. 
+Liparis liliifolia. 
+Cypripedium acaule. 
+Habenaria virescens. 
+Aletris farinosa and aurea. 
+Aletris Japonica. 
+Iris tectorum = cristata, Miq. 
+(Dioscorea spp.) 
+Smilax Sieboldii. 
+Iris cristata. 
+Dioscorea villosa. 
+Smilax hispida. 
+" herbacea and peduncularis. 
 
+lierbacea rr Nipponica, 
+Smilax tamnif olia. 
+( " higoensis.) 
+Croomia pauciflora. 
+Trillium obovatum. 
+Croomia pauciflora. 
+Trillium, grandiflorum. 
+" erectum. 
+Trillium obovatum. 
+" erectum var. 
+(Tofieldia Japonica and nutans.) 
+Tofieldia glutinosa and pubens. 
+
+Helonias bullata. 
+Heloniopsis pauciflora, breviscapa, 
+Japonica. 
+Chamcelirium luteum. 
+(Zygadenus Japonicus.) 
+Streptopus roseus. 
+Prosartes viridescens, etc, 
+Clintonia TJdensis. 
+Chamaelirium luteum. 
+Zygadenus, 3 spp. 
+Streptopus roseus. 
+Prosartes lanuginosa. 
+Clintonia borealis. 
+Polygonatum giganteum, 
+Smilacina trifolia. 
+Zygadenus glaucus, etc. 
+Streptopus roseus. 
+Prosartes Hookeri, etc. 
+Clintonia uniflora. 
+Polygonatum giganteum. 
+Smilacina trifolia. 
+Smilacina racemosa var. 
+racemosa. 
+11 Japonica. 
+** Davarica. 
+stellata. 
+stellata. 
+Erythronium Americanum 
+and albidum. 
+Erythronium grandiflorum, 
+Erythronium grandiflorum. 
+Karthecium Americanum. 
+Scirpus Eriophorum. 
+Narthecium Asiatieum. 
+Scirpus Eriophorum. 
+Carex rostrata. 
+Carex rostrata. 
+Carex stipata 
+Zizania aquatica. 
+Arundinaria macrosperma. 
+Avena striata and Smithii. 
+Adiantum pedatum. 
+Carex stipata. 
+Carex stipata. 
+Zizania— Hydropyrumlatifolium. 
+(Arundinaria Japonica. ) 
+A vena collosa. 
+Adiantum pedatum. 
+Adiantum pedatum. 
+Pellsea Stelleri — gracilis. 
+Aspidium fragrans. 
+Asplenium thelypteroides. 
+Camptosorus Sibiricus. 
+Onoclea sensibilis. 
+Osmunda cinnamonea. 
+Pelhea gracilis. 
+Aspidium fragrans. 
+Asplenium thelypteroides. 
+Camptosorus rhizophyllus. 
+Onoclea sensibilis. 
+Osmunda cinnamonea. 
+' ' Claytoniana. 
+Lygodium palmatum. 
+Botrychium Virginicum. 
+Lycopodium lucidulum. 
+" dendroideum. 
+" Claytoniana. 
+(Lygodium Japonieum.) 
+Botrychium Virginicum. 
+Lycopodium lucidulum. 
+dendroideum. 
+It appears that two thirds of the middle column is blank ; namely, 
+that only a third of the species or forms which are more or less peculiar 
+to temperate Atlantic North America (i. e. y east of the Mississippi 
+and south of the Great Lakes and the St. Lawrence) and 
+to temperate eastern Asia, are represented in Oregon and California. 
+Moreover, eighty of the genera here treated of are peculiar 
 to North America and temperate Asia ; and sixty-three (i. e., 
 more than three quarters) of these are not met with in western 
 North America. 
@@ -23562,22 +23846,45 @@ immediate banks of the traversing rivers, which are themselves
 far between. 
 1 A lecture delivered before the Harvard University Natural History 
 Society, April 18, 1878. (American Journal of Science and Arts, 3 ser., 
-xvi. 85, 183.) <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:52:06 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+xvi. 85, 183.) 
+In the Rocky Mountains we come again to forest, but only 
+in narrow lines or patches ; and if you travel by the Pacific 
+Railroad you hardly come to any : the eastern and the interior-desert 
+plains meet along the comparatively low level of 
+the divide which here is so opportune for the railway ; but 
+both north and south of this line the mountains themselves 
+are fairly wooded. Beyond, through all the wide interior 
+basin, and also north and south of it, the numerous mountain 
+chains seem to be as bare as the alkaline plains they traverse, 
+mostly north and south ; and the plains bear nothing taller 
+than sage-brush. But those who reach and climb these mountains 
+find that their ravines and higher recesses nourish no 
+small amount of timber, though the trees themselves are 
+mostly small and always low. 
+When the western rim of this great basin is reached there 
+is an abrupt change of scene. This rim is formed of the 
+Sierra Nevada. Even its eastern slopes are forest-clad in 
+great measure, while the western bear in some respects the 
+noblest and most remarkable forest of the world, — remarkable 
+even for the number of species of evergreen trees occupying 
+a comparatively narrow area, but esjaecially for their 
+wonderful development in size and altitude. Whatever may 
+be claimed for individual Eucalyptus-trees in certain sheltered 
+ravines of the southern part of Australia, it is probable that 
+there is no forest to be compared for grandeur with that which 
+stretches, essentially unbroken, — though often narrowed, and 
+nowhere very wide, — from the southern part of the Sierra 
+Nevada in lat. 36° to Puget Sound beyond lat. 49°, and not a 
+little farther. 
+Descending into the long valley of California, the forest 
+changes, dwindles, and mainly disappears. In the Pacific 
+coast ranges it resumes its sway, with altered features, some 
+of them not less magnificent and of greater beauty. The 
+Redwoods of the coast, for instance, are little less gigantic 
+than the Big Trees of the Sierra Nevada, and far handsomer, 
+and a thousand times more numerous. And several species, 
+which are merely or mainly shrubs in the drier Sierra, become 
+lordly trees in the moister air of the northerly coast 
 ranges. Through most of California these two Pacific forests 
 are separate ; in the northern part of that State they join, 
 and form one rich woodland belt, skirting the Pacific, backed 
@@ -32621,22 +32928,45 @@ by a series of papers, mostly monographs of genera,
 in Hooker's " Journal of Botany," in the " Journal of the 
 Linnaean Society," and elsewhere, by the elaboration of the 
 order for the imperial "Flora Brasiliensis," and later, by the 
-" Revision of the Genus Cassia," and that of the suborder <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-<head>
-<title>File Delivery Service/1.1</title>
-</head>
-<body bgcolor="#ffffe8" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
-<strong><font size="-1">Harvard University Library / File Delivery Service (prod/1.1)</font>
-<hr>
-<font size="+2">File Delivery Service</font></strong>
-<p>FDS internal error.<br>edu.harvard.hul.ois.drs2.callservice.CallServiceException<br>Problem communicating with DRS services (Error reported by DRS service): edu.harvard.hul.ois.drs2.callservice.CallServiceException: Item not found. Could not find file with role OBJECT_DESCRIPTOR</p>
-<hr>
-<address><font size="-1">
-Wed, Jul 10, 2019 22:53:02 EDT / Copyright 2019 by the President and Fellows of Harvard College
-</font></address>
-</html>
-
+" Revision of the Genus Cassia," and that of the suborder 
+Mimosece, in the " Transactions of the Linnaean Society," the 
+latter (a quarto volume in size) published as late as the year 
+1875. Both are perfect models of monographical work. 
+An important series of monographs in another and more 
+condensed form was contributed to De Candolle's " Prodromus," 
+namely, the Tribe Ericece in the seventh volume, the 
+Polemoniacece in the ninth, the Scrophulariacece in the tenth, 
+the Labiates forming the greater part of the twelfth, and the 
+Eriogonece in the fourteenth ; these together filling 1133 
+pages according to the surviving editor. If not quite the 
+largest collaborator of the De Candolles, as counted in pages, 
+he was so in the number of plants described, and his work 
+was of the best. It was also ready in time, which is more 
+than can be said of the collaborators in general. 
+There are few parts of the world upon the botany of which 
+Mr. Bentham has not touched — Tropical America, in the ample 
+collections of Mr. Spruce, and those of Hartweg, distributed, 
+and the former partly and the latter wholly determined 
+by him, as also Hinds' collections made in the voyage of the 
+Sulphur, besides what has already been adverted to ; Polynesia, 
+from Hinds' and Barclay's collections ; Western Tropical 
+Africa, in the Niger Flora, most of the "Flora Nigritiana" 
+being from his hand ; the " Flora Hongkongensis," in which 
+he began the series of British colonial floras ; and finally that 
+vast work, the " Flora Australiensis," in seven volumes, which 
+the author began when he was over sixty years old and finished 
+when he was seventy-seven. Nor did he neglect the cultivation 
+of the narrow and more exhausted field of British 
+botany. Flis " Handbook of the British Flora," for the use of 
+beginners and amateurs, published in 1858, has gone through 
+four large editions. Its special object was to enable a beginner 
+or a mere amateur, with little or no previous scientific 
+knowledge and without assistance, to work out understandingly 
+the characters by which the plants of a limited flora may 
+be distinguished from each other, these being expressed as 
+much as possible in ordinary language, or in such technical 
+terms as could be fully explained in the book itself and easily 
+apprehended by the learner. The immediate and continued 
 popularity of this handy volume, bringing the light of full 
 knowledge and sound methods to guide the beginner's way, illustrates 
 the advantage of having elementary works prepared 

@@ -7,6 +7,7 @@ import string
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 import datetime
+import time
 
 # Begin caching recipe
 CACHE_FNAME = "cache.json"
@@ -168,24 +169,29 @@ def request_txts_from_fds(book_id_dict,page_range):
         page_id_index = 0
 
         for page in tqdm(page_range):
+            successful = False
+            while not successful:
 
-            page_id = book_id_dict[book_id][page_id_index]
-            url = "http://fds.lib.harvard.edu/fds/deliver/" + page_id
-            params = {}
+                page_id = book_id_dict[book_id][page_id_index]
+                url = "http://fds.lib.harvard.edu/fds/deliver/" + page_id
+                params = {}
 
-            unique_id = params_unique_combination(url,params)
+                unique_id = params_unique_combination(url,params)
 
-            if unique_id in CACHE_DICTION:
-                data = CACHE_DICTION[unique_id]
+                if unique_id in CACHE_DICTION:
+                    data = CACHE_DICTION[unique_id]
+                    successful = True
 
-            else:
-                response_object = requests.get(url)
-                data = response_object.text
+                else:
+                    response_object = requests.get(url)
+                    data = response_object.text
 
-                CACHE_DICTION[unique_id] = data
-
-            if 'DOCTYPE' in data:
-                print("\nPage ", str(page_id_index + 1),' (id:', page_id, ') returned html')
+                    if 'DOCTYPE' in data:
+                        print("\nPage ", str(page_id_index + 1),' (id:', page_id, ') returned html')
+                        time.sleep(5)
+                    else:
+                        successful = True
+                        CACHE_DICTION[unique_id] = data
 
             pages.append(data)
 
