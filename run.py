@@ -11,7 +11,6 @@ import datetime
 import time
 import string
 
-
 # OPTIONS
 # *****************************
 
@@ -24,6 +23,7 @@ HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/99000454116020
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941' # Book of Woman's Power
 # HDC_url = input("Paste URL from Harvard Digital Collections: ")
 manual_pagination = False
 manual_page_start = 1 #
@@ -113,10 +113,13 @@ def read_HDC_page(url):
 
 def get_id_from_HDC_URL(page_url,sought_url_stem,tag_name,attribute):
     HDC_page = read_HDC_page(page_url)
-    soup = BeautifulSoup(HDC_page,'html.parser')
+    # print(HDC_page)
+    soup = BeautifulSoup(HDC_page,'lxml')
     tags = soup.find_all(tag_name) # e.g. 'iframe'
+    # print(tags)
     sought_urls = []
     for tag in tags:
+        print(tag)
         if sought_url_stem in tag[attribute]:  # e.g. 'src'
             sought_urls.append(tag[attribute])
     return sought_urls[0]
@@ -290,15 +293,6 @@ if start_with_libcloud_search == True:
 # Takes in an HDC URL and puts out a dictionary with PDS and HDC ids, urls, and a record
 
 if start_with_HDC_url == True:
-    # Get PDS ID
-    print("Finding digital repository service identifier...")
-    pds_url_stem = 'pds.lib.harvard.edu/pds/view/'
-    tag_name = 'iframe'
-    attribute = 'src'
-    pds_link = get_id_from_HDC_URL(HDC_url,pds_url_stem,tag_name,attribute)
-    pds_id_from_HDC = pds_link.split('/')[-1]   # e.g. 2585728 , 2678271
-    print(pds_id_from_HDC)
-
     # Get associated metadata
     print("Getting metadata from LibraryCloud...")
     record_id_url_stem = 'https://id.lib.harvard.edu/digital_collections/'
@@ -310,6 +304,15 @@ if start_with_HDC_url == True:
 
     metadata = search_LibraryCloud(record_id_from_HDC)
     print(metadata['title'])
+
+    # Get PDS ID
+    print("Finding digital repository service identifier...")
+    pds_url_stem = 'pds.lib.harvard.edu/pds/view/'
+    tag_name = 'iframe'
+    attribute = 'src'
+    pds_link = get_id_from_HDC_URL(HDC_url,pds_url_stem,tag_name,attribute)
+    pds_id_from_HDC = pds_link.split('/')[-1]   # e.g. 2585728 , 2678271
+    print(pds_id_from_HDC)
 
     book_record = {                # TODO: Write a class factory for this dict
         'pds_id' : pds_id_from_HDC,
