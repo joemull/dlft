@@ -1,6 +1,7 @@
 
 *.txt
-Results
+/Results/*.json
+/Results/*.txt
 cache.json
 dev_notes.md
 funcs_old.md
