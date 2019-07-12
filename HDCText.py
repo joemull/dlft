@@ -12,26 +12,19 @@ import time
 # OPTIONS
 # *****************************
 
-start_with_HDC_url = True # Turn on if you have a URL from Harvard Digital Collections to enter
+# Change the value of HDC_url to the desired Harvard Digital Collections URL
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990058808400203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941'
 HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # Short 40-page report
-# HDC_url = 'http://digitalcollections.library.harvard.edu/catalog/fun00001c00689'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990033211010203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941' # Book of Woman's Power
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages, not run
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
 # HDC_url = input("Paste URL from Harvard Digital Collections: ")
 manual_pagination = False
-manual_page_start = 1 #
-manual_page_end = 11 #
-
-
-start_with_libcloud_search = False # Turn on if you want to start by searching LibraryCloud metadata
-# search = input("Search: ")
-q = "blue"
+manual_page_start = 1
+manual_page_end = 11
 
 # FUNCTIONS
 # ********************************
@@ -287,80 +280,62 @@ def json_file(book_record,filestring):
     file_obj.write(json_data)
     file_obj.close()
 
-# PART 1a. SEARCHING METADATA IN LIBRARYCLOUD (OPTIONAL)
-# ********************************
-# Searches LibraryCloud for individual DRS item records that are parts of multipage objects
-
-if start_with_libcloud_search == True:
-    print('Searching LibraryCloud...')
-    records = search_LibraryCloud(q)
-    nrs_urls = extract_nrs_url(records)
-
-# PART 1b. READING HARVARD DIGITAL COLLECTIONS WEBPAGE
+# PART 1. COLLECTING METADATA FOR MULTIPAGE OBJECT
 # ********************************
 # Takes in an HDC URL and puts out a dictionary with DRS and HDC ids, urls, and a record
 
-if start_with_HDC_url == True:
-    # Get associated metadata
-    print("Getting metadata from LibraryCloud...")
-    if '?' in HDC_url:
-        HDC_url = HDC_url.split('?')[0]
-    record_permalink = HDC_url
-    record_id_from_HDC = HDC_url.split('/')[-1]
-    # print(record_id_from_HDC)
+# Get associated metadata
+print("Getting metadata from LibraryCloud...")
+if '?' in HDC_url:
+    HDC_url = HDC_url.split('?')[0]
+record_permalink = HDC_url
+record_id_from_HDC = HDC_url.split('/')[-1]
+# print(record_id_from_HDC)
 
-    metadata = search_LibraryCloud(record_id_from_HDC)
-    print(metadata['title'])
+metadata = search_LibraryCloud(record_id_from_HDC)
+print(metadata['title'])
 
-    # Get DRS ID
-    print("Finding digital repository service identifier...")
-    pds_url_stem = 'pds.lib.harvard.edu/pds/view/'
-    tag_name = 'iframe'
-    attribute = 'src'
-    pds_link = get_id_from_HDC_URL(HDC_url,pds_url_stem,tag_name,attribute)
-    drs_id_from_HDC = pds_link.split('/')[-1]   # e.g. 2585728 , 2678271
-    print(drs_id_from_HDC)
+# Get DRS ID
+print("Finding digital repository service identifier...")
+pds_url_stem = 'pds.lib.harvard.edu/pds/view/'
+tag_name = 'iframe'
+attribute = 'src'
+pds_link = get_id_from_HDC_URL(HDC_url,pds_url_stem,tag_name,attribute)
+drs_id_from_HDC = pds_link.split('/')[-1]   # e.g. 2585728 , 2678271
+print(drs_id_from_HDC)
 
-    book_record = {                # TODO: Write a class factory for this dict
-        'drs_id' : drs_id_from_HDC,
-        'pds_link' : pds_link,
-        'record_id' : record_id_from_HDC,
-        'permalink' : record_permalink,
-        'metadata' : metadata
-    }
+book_record = {                # TODO: Write a class factory for this dict
+    'drs_id' : drs_id_from_HDC,
+    'pds_link' : pds_link,
+    'record_id' : record_id_from_HDC,
+    'permalink' : record_permalink,
+    'metadata' : metadata
+}
 
-# PART 2. FINDING MULTIPAGE OBJECT IDs
+# PART 2. COLLECTING METADATA FOR EACH PAGE
 # **************************
-# Sends url for single-page item to name resolution service (NRS) to look up DRS ID of multipage object
+# Checks page count using IIIF proxy and then gets an XML document from FDS specifying all the DRS ids for the text files for all the pages of OCR
 
-if start_with_libcloud_search == True:
-    print("Finding digital repository service identifier...")
-    drs_ids_from_libcloud = nrs_url_to_drs_id(nrs_urls)
-    # print(ids[1])
+drs_ids = []
+drs_ids.append(drs_id_from_HDC)
+if manual_pagination == True:
+    page_range = range(manual_page_start,manual_page_end)
+else:
+    page_count = get_page_count(drs_ids[0])
+    page_range = range(1,page_count + 1)
+    print("Getting page count...")
+    print(page_count)
+
+print("Counting pages avilable...")
+book_id_dict = get_text_ids_from_xml(drs_ids)
+print(len(book_id_dict[drs_ids[0]]))
 
 # PART 3. GETTING FULL-TEXT OCR FOR ALL PAGES OF OBJECT(S)
 # **************************
-# Sends GET requests to Harvard IIIF, pulls OCR text values from each page, and concatenates
+# Sends a GET request to the FDS for a text file for each page
 
-drs_ids = []
-if start_with_libcloud_search == True:
-    drs_ids.append(drs_ids_from_libcloud)
-    print(drs_ids)
-else:
-    drs_ids.append(drs_id_from_HDC)
-    if manual_pagination == True:
-        page_range = range(manual_page_start,manual_page_end)
-    else:
-        page_count = get_page_count(drs_ids[0])   # TODO: Make this use fds rather than iiif
-        page_range = range(1,page_count + 1)
-        print("Getting page count...")
-        print(page_count)
-
-    print("Counting pages avilable...")
-    book_id_dict = get_text_ids_from_xml(drs_ids)
-    print(len(book_id_dict[drs_ids[0]]))
-    print("Getting book contents...")
-    book_contents = request_txts_from_fds(book_id_dict,page_range)
+print("Getting book contents...")
+book_contents = request_txts_from_fds(book_id_dict,page_range)
 
 # PART 4. OUTPUTS
 # **************************

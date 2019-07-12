@@ -18,9 +18,22 @@ To install python modules, you can use `pip` with this syntax at a bash console:
 
 ## How to run the program
 1. Check to make sure you have the above external modules installed.
-2. Change the value of `HDC_url` at the top of `HDCText.py` to the desired URL.
+2. Change the value of `HDC_url` at the top of `HDCText.py` to the desired URL. Example:
+
+```py
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941'
+```
+
 3. Run `HDCText.py` in a bash console with `python HDCText.py`.
 4. Wait. It will take a while, depending on the length of the book. The file delivery service seems to be able to return about 2-5 pages per second.
+
+## Options
+You can set the page range manually to get only the OCR for a specified range. Change `False` to `True` and change the numbers in these lines:
+```py
+manual_pagination = False
+manual_page_start = 1
+manual_page_end = 11
+```
 
 ## Future development
 This script does a lot of work external to the DRS-HDC system to put together the right OCR data. If this kind of tool is developed natively and put into the Harvard Digital Collections interface as a 'Download Full Text' button, there is no doubt a better way to structure the script that gets the needed DRS identifiers more efficiently.
