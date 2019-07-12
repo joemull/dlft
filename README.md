@@ -39,4 +39,4 @@ manual_page_end = 11
 This script does a lot of work external to the DRS-HDC system to put together the right OCR data. If this kind of tool is developed natively and put into the Harvard Digital Collections interface as a 'Download Full Text' button, there is no doubt a better way to structure the script that gets the needed DRS identifiers more efficiently.
 
 <!-- Images -->
-[copy-paste-mirador]: images/copy-paste-mirador.JPG "User experience of character-recognized text"
+[copy-paste-mirador]: images/copy-paste-mirador.JPG "The user experience of downloading character-recognized text for each page"
