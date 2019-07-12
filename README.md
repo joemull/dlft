@@ -6,7 +6,7 @@ In version 1 of [Harvard Digital Collections](https://library.harvard.edu/digita
 
 ![alt text][copy-paste-mirador]
 
-This script is a proof of concept for single-click full-text download. The script takes the URL of a Harvard Digital Collections item page as input. After making several calls to HDC, IIIF, LibraryCloud, and FDS (File Delivery Service) to line up the right DRS identifiers, the program gets the text for each page and concatenates them all into a single TXT file. It also puts out a separate JSON file with the associated metadata. Both these files are saved in `/Results/`.
+[HDCText](https://github.com/joemull/HDCText) is a proof of concept for single-click full-text download. The script takes the URL of a Harvard Digital Collections item page as input. After making several calls to HDC, IIIF, LibraryCloud, and FDS (File Delivery Service) to line up the right DRS identifiers, the program gets the text for each page and concatenates them all into a single TXT file. It also puts out a separate JSON file with the associated metadata. Both these files are saved in `/Results/`.
 
 ## Dependencies
 The program was made with Python 3.7.3 and needs the following modules installed in the run environment:
