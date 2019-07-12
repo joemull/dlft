@@ -342,14 +342,13 @@ book_contents = request_txts_from_fds(book_id_dict,page_range)
 # Makes a results folder and outputs in various formats
 
 createFolder('./Results/')
-if start_with_HDC_url == True:
-    filestring = underscore_puncts_and_whitespace(book_record['metadata']['title'])
-    print("Creating JSON file for metadata...")
-    try:
-        json_file(book_record,filestring)
-    except:
-        filestring = create_numeric_name(book_record['drs_id'])
-        json_file(book_record,filestring)
-    print("Creating text file from OCR...")
-    txt_file_plain(book_contents[drs_id_from_HDC],filestring)
-    print("Done! Check results folder.")
+filestring = underscore_puncts_and_whitespace(book_record['metadata']['title'])
+print("Creating JSON file for metadata...")
+try:
+    json_file(book_record,filestring)
+except:
+    filestring = create_numeric_name(book_record['drs_id'])
+    json_file(book_record,filestring)
+print("Creating text file from OCR...")
+txt_file_plain(book_contents[drs_id_from_HDC],filestring)
+print("Done! Check results folder.")
