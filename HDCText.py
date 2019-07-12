@@ -1,7 +1,6 @@
 # Import any needed packages
 import requests
 import json
-import titlecase
 import ast
 import os
 import string
@@ -9,7 +8,6 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 import datetime
 import time
-import string
 
 # OPTIONS
 # *****************************
