@@ -15,12 +15,12 @@ import time
 # Change the value of HDC_url to the desired Harvard Digital Collections URL
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990058808400203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941'
-HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # Short 40-page report
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # Short 40-page report
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990033211010203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
 # HDC_url = input("Paste URL from Harvard Digital Collections: ")
 manual_pagination = False
 manual_page_start = 1
@@ -48,6 +48,12 @@ def params_unique_combination(baseurl,params_d,private_keys=["apikey"]):
             res.append("{}-{}".format(k, params_d[k]))
     return baseurl + "_".join(res)
 
+def save_cache(CACHE_DICTION):
+    fileRef = open(CACHE_FNAME,"w")
+    data_json = json.dumps(CACHE_DICTION)
+    fileRef.write(data_json)
+    fileRef.close()
+
 def search_LibraryCloud(search):
     base_uri = "https://api.lib.harvard.edu/v2/items.dc.json"
     params = {}
@@ -67,10 +73,7 @@ def search_LibraryCloud(search):
 
         CACHE_DICTION[unique_id] = data_python
 
-        fileRef = open(CACHE_FNAME,"w")
-        data_json = json.dumps(CACHE_DICTION)
-        fileRef.write(data_json)
-        fileRef.close()
+        save_cache(CACHE_DICTION)
 
     records = data_python['items']['dc']
 
@@ -99,10 +102,7 @@ def read_HDC_page(url): # input is single url
 
         CACHE_DICTION[unique_id] = data
 
-        fileRef = open(CACHE_FNAME,"w")
-        data_json = json.dumps(CACHE_DICTION)
-        fileRef.write(data_json)
-        fileRef.close()
+        save_cache(CACHE_DICTION)
 
         return data
 
@@ -133,10 +133,7 @@ def get_xml_page_from_fds(drs_id):
 
         CACHE_DICTION[unique_id] = data
 
-        fileRef = open(CACHE_FNAME,"w")
-        data_json = json.dumps(CACHE_DICTION)
-        fileRef.write(data_json)
-        fileRef.close()
+        save_cache(CACHE_DICTION)
 
         return data
 
@@ -198,10 +195,7 @@ def request_txts_from_fds(book_id_dict,page_range): # first input needs to be a 
 
         books[book_id] = pages
 
-    fileRef = open(CACHE_FNAME,"w")
-    data_json = json.dumps(CACHE_DICTION)
-    fileRef.write(data_json)
-    fileRef.close()
+    save_cache(CACHE_DICTION)
 
     return books
 
@@ -213,11 +207,11 @@ def trim_iiif_response(resp):
     data = ast.literal_eval(data)
     return data
 
-def get_page_count(drs_id):
+def request_from_iiif_proxy(drs_id):
     api_base_uri = "https://iiif.lib.harvard.edu/proxy/get/" + drs_id
     api_params_dict = {}
-    api_params_dict['callback'] = '?'
     api_params_dict['n'] = '1'
+    api_params_dict['callback'] = '?'
 
     unique_id = params_unique_combination(api_base_uri,api_params_dict)
 
@@ -226,18 +220,14 @@ def get_page_count(drs_id):
     else:
         response_object = requests.get(api_base_uri,api_params_dict)
         data = response_object.text
+        print(data)
         data = trim_iiif_response(data)
 
         CACHE_DICTION[unique_id] = data
 
-        fileRef = open(CACHE_FNAME,"w")
-        data_json = json.dumps(CACHE_DICTION)
-        fileRef.write(data_json)
-        fileRef.close()
+        save_cache(CACHE_DICTION)
 
-    page_count = int(data['page']['lastpage'])
-
-    return page_count
+    return data
 
 def createFolder(directory):
     try:
@@ -319,9 +309,9 @@ book_record = {                # TODO: Write a class factory for this dict
 drs_ids = []
 drs_ids.append(drs_id_from_HDC)
 if manual_pagination == True:
-    page_range = range(manual_page_start,manual_page_end)
+    page_range = range(manual_page_start,manual_page_end + 1)
 else:
-    page_count = get_page_count(drs_ids[0])
+    page_count = int(request_from_iiif_proxy(drs_ids[0])['page']['lastpage'])
     page_range = range(1,page_count + 1)
     print("Getting page count...")
     print(page_count)
