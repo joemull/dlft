@@ -6,7 +6,7 @@ In version 1 of [Harvard Digital Collections](https://library.harvard.edu/digita
 
 ![alt text][copy-paste-mirador]
 
-[dlft](https://github.com/joemull/dlft) is a proof of concept for single-click full-text download. The script takes the URL of a Harvard Digital Collections item page as input. After locating the Digital Repository Service (DRS) identifier on the HDC page, the script calls the endpoint https://pds.lib.harvard.edu/pds/get/ to get the text for each page and concatenates them all into a single TXT file, saved in `/Results/`.
+[dlft](https://github.com/joemull/dlft) is a proof of concept for single-click full-text download. The script takes the URL of a Harvard Digital Collections item page as input. After locating the Digital Repository Service (DRS) identifier on the HDC page, the script calls the endpoint `https://pds.lib.harvard.edu/pds/get/` to get the text for each page and concatenates them all into a single TXT file, saved in `/Results/`.
 
 ## Dependencies
 The program was made with Python 3.7.3 and needs the following modules installed in the run environment:
@@ -36,7 +36,7 @@ manual_page_end = 11
 ```
 
 ## Future development
-Before this tool is added to the interface of Harvard Digital Collections, it will need to be rewritten using javascript. More work might also be done to find the best endpoint. https://pds.lib.harvard.edu/pds/get/ may not be as fast as http://fds.lib.harvard.edu/fds/deliver/, but the File Delivery Service requires the exact DRS ID for each txt file, which needs to be scraped from a comprehensive XML page available from the same endpoint. 
+Before this tool is added to the interface of Harvard Digital Collections, it will need to be rewritten using javascript. More work might also be done to find the best endpoint. `https://pds.lib.harvard.edu/pds/get/` may not be as fast as `http://fds.lib.harvard.edu/fds/deliver/`, but the File Delivery Service requires the exact DRS ID for each txt file, which needs to be scraped from a comprehensive XML page available from the same endpoint. 
 
 <!-- Images -->
 [copy-paste-mirador]: images/copy-paste-mirador.JPG "The user experience of downloading character-recognized text for each page"
