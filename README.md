@@ -2,7 +2,7 @@
 A tool to get the full text of a multipage item in Harvard Digital Collections
 
 ## Description
-In version 1 of [Harvard Digital Collections](https://library.harvard.edu/digital-collections), users who want the full OCR text of a multi-page item have to copy the OCR text from each page of mirador viewer, which takes multiple clicks and is very time-consuming for more than a few pages.
+In version 1 of [Harvard Digital Collections](https://library.harvard.edu/digital-collections), users who want the full OCR text of a multi-page item have to copy it from a popup in the mirador viewer, which takes multiple clicks and is time-consuming for more than a few pages.
 
 ![alt text][copy-paste-mirador]
 
