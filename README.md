@@ -1,4 +1,4 @@
-# HDCText
+# DownLoad Full Text
 A tool to get the full text of a multipage item in Harvard Digital Collections
 
 ## Description
@@ -6,7 +6,7 @@ In version 1 of [Harvard Digital Collections](https://library.harvard.edu/digita
 
 ![alt text][copy-paste-mirador]
 
-[HDCText](https://github.com/joemull/HDCText) is a proof of concept for single-click full-text download. The script takes the URL of a Harvard Digital Collections item page as input. After making several calls to HDC, IIIF, LibraryCloud, and FDS (File Delivery Service) to line up the right DRS identifiers, the program gets the text for each page and concatenates them all into a single TXT file. It also puts out a separate JSON file with the associated metadata. Both these files are saved in `/Results/`.
+[dlft](https://github.com/joemull/dlft) is a proof of concept for single-click full-text download. The script takes the URL of a Harvard Digital Collections item page as input. After locating the Digital Repository Service (DRS) identifier on the HDC page, the script calls the endpoint https://pds.lib.harvard.edu/pds/get/ to get the text for each page and concatenates them all into a single TXT file, saved in `/Results/`.
 
 ## Dependencies
 The program was made with Python 3.7.3 and needs the following modules installed in the run environment:
@@ -18,14 +18,14 @@ To install python modules, you can use `pip` with this syntax at a bash console:
 
 ## How to run the program
 1. Check to make sure you have the above external modules installed.
-2. Change the value of `HDC_url` at the top of `HDCText.py` to the desired URL. Example:
+2. Change the value of `HDC_url` at the top of `dlft.py` to the desired URL. Example:
 
 ```py
 HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941'
 ```
 
-3. Run `HDCText.py` in a bash console with `python HDCText.py`.
-4. Wait. It will take a while, depending on the length of the book. The file delivery service seems to be able to return about 2-5 pages per second.
+3. Run `dlft.py` in a bash console with `python dlft.py`.
+4. Wait. It will take a while, depending on the length of the book. The page delivery service seems to be able to return about 2-3 pages per second.
 
 ## Options
 You can set the page range manually to get only the OCR for a specified range. Change `False` to `True` and change the numbers in these lines:
@@ -36,7 +36,7 @@ manual_page_end = 11
 ```
 
 ## Future development
-This script does a lot of work external to the DRS-HDC system to put together the right OCR data. If this kind of tool is developed natively and put into the Harvard Digital Collections interface as a 'Download Full Text' button, there is no doubt a better way to structure the script that gets the needed DRS identifiers more efficiently.
+Before this tool is added to the interface of Harvard Digital Collections, it will need to be rewritten using javascript. More work might also be done to find the best endpoint. https://pds.lib.harvard.edu/pds/get/ may not be as fast as http://fds.lib.harvard.edu/fds/deliver/, but the File Delivery Service requires the exact DRS ID for each txt file, which needs to be scraped from a comprehensive XML page available from the same endpoint. 
 
 <!-- Images -->
 [copy-paste-mirador]: images/copy-paste-mirador.JPG "The user experience of downloading character-recognized text for each page"
