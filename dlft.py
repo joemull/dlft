@@ -11,10 +11,17 @@ import time
 # INPUT
 # **********************
 
-HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990058808400203941' # 124 pages
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941' # 305 pages
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # Short 40-page report
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990033211010203941'
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941'
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941'
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
 manual_pagination = False
-manual_page_start = 1
-manual_page_end = 11
+manual_page_start = 5
+manual_page_end = 15
 
 # FUNCTIONS
 # ************************
@@ -92,35 +99,81 @@ def get_id_from_HDC_URL(page_url,sought_string,tag_name,attribute): # input is f
 
 def trim_iiif_response(resp):
     data = resp.strip()
-    data = data.lstrip("?")
     data = data.rstrip(";")
     data = data.strip("()")
     data = ast.literal_eval(data)
     return data
 
 def request_from_iiif_proxy(drs_id,page_range):
-    api_base_uri = "https://iiif.lib.harvard.edu/proxy/get/" + drs_id
+    # api_base_uri = "https://iiif.lib.harvard.edu/proxy/get/" + drs_id
+    api_base_uri = "https://pds.lib.harvard.edu/pds/get/" + drs_id
     api_params_dict = {}
-    api_params_dict['callback'] = '?'
+    api_params_dict['callback'] = ''
+
     pages = []
-    for page in page_range:
-        api_params_dict['n'] = page
 
-        unique_id = params_unique_combination(api_base_uri,api_params_dict)
+    for page in tqdm(page_range):
+        successful = False
+        while not successful:
+            api_params_dict['n'] = page
 
-        if unique_id in CACHE_DICTION:
-            data = CACHE_DICTION[unique_id]
-        else:
-            response_object = requests.get(api_base_uri,api_params_dict)
-            data = response_object.text
-            print(data)
-            data = trim_iiif_response(data)
+            unique_id = params_unique_combination(api_base_uri,api_params_dict)
 
-            # CACHE_DICTION[unique_id] = data
+            if unique_id in CACHE_DICTION:
+                data = CACHE_DICTION[unique_id]
+                successful = True
+            else:
+                response_object = requests.get(api_base_uri,api_params_dict)
+                data = response_object.text
+
+                if 'page' not in data:
+                    print("\nError on page",str(page))
+                    print(data)
+                else:
+                    data = trim_iiif_response(data)
+                    CACHE_DICTION[unique_id] = data
+                    successful = True
+
         pages.append(data)
-    # save_cache(CACHE_DICTION)
 
-    return data
+    # print(pages)
+    save_cache(CACHE_DICTION)
+    return pages
+
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
+
+def name_to_filestring(title):
+    filestring = ''
+    exclude = string.punctuation + string.whitespace
+    for char in title:
+        if char in exclude:
+            filestring += '_'
+        else:
+            filestring += char
+    if len(filestring) > 50:
+        filestring = filestring[0:50]
+    return filestring
+
+def create_numeric_name(drs_id):
+    t = str(datetime.datetime.now()).split('.')[0]
+    filestring = drs_id + " " + t
+    filestring = name_to_filestring(filestring)
+    return filestring
+
+def txt_file_plain(pages,filestring):
+    text = ''
+    for page in pages:
+        ocr = page['page']['text']
+        text += ocr
+    filename = 'Results/' + filestring + '.txt'
+    file_obj = open(filename,'w',encoding='utf-8')
+    file_obj.write(text)
+    file_obj.close()
 
 # GET DRS ID
 # *****************
@@ -135,13 +188,31 @@ drs_id_from_HDC = iiif_manifest_link.split(':')[-1]   # e.g. 2585728 , 2678271
 # print(drs_id_from_HDC)
 
 # GET PAGE COUNT
+# ***************
+
 if manual_pagination == True:
-    page_range = range(manual_page_start,manual_page_end)
+    page_range = range(manual_page_start,manual_page_end + 1)
+    print('Pages {}-{} requested...'.format(manual_page_start,manual_page_end))
 else:
-    page_count = int(request_from_iiif_proxy(drs_id_from_HDC,range(1,1))['page']['lastpage'])
+    page_count = int(request_from_iiif_proxy(drs_id_from_HDC,range(1,2))[0]['page']['lastpage'])
     page_range = range(1,page_count + 1)
     print("Getting page count...")
     print(page_count)
 
 # GET PAGE CONTENTS
 # ***************
+
+pages = request_from_iiif_proxy(drs_id_from_HDC,page_range)
+
+# OUTPUT FILE
+# ***************
+
+createFolder('./Results/')
+filestring = name_to_filestring(pages[0]['page']['displaylabel'])
+print("Creating text file from OCR...")
+try:
+    txt_file_plain(pages,filestring)
+except:
+    filestring = create_numeric_name(drs_id_from_HDC)
+    txt_file_plain(pages,filestring)
+print("Done! Check Results folder.")
