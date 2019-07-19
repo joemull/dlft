@@ -11,15 +11,14 @@ import time
 # INPUT
 # **********************
 
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # 40 pages - 6 seconds
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941' # 55 pages
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990058808400203941' # 124 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941' # 305 pages
-HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # Short 40-page report
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990033211010203941'
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941'
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941'
-HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
-manual_pagination = True
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # 900 pages - 3 minutes
+
+manual_pagination = False
 manual_page_start = 5
 manual_page_end = 15
 
@@ -195,7 +194,8 @@ def request_txts_from_fds(page_ids): # input must be dictionary whose keys are p
                 data = response_object.text
 
                 if 'DOCTYPE' in data:
-                    print("\nPage {} (id: {} ) returned html".format(str(page_number),page_ids[page_number]))
+                    one = 1
+                    # print("\nPage {} (id: {} ) returned error".format(str(page_number),page_ids[page_number]))
                 else:
                     successful = True
                     CACHE_DICTION[unique_id] = data
@@ -252,7 +252,7 @@ attribute = 'onclick'
 manifest_string = get_id_from_HDC_URL(HDC_url,unique_string,tag_name,attribute)
 iiif_manifest_link = manifest_string[len(unique_string):].strip("('')")
 drs_id_from_HDC = iiif_manifest_link.split(':')[-1]   # e.g. 2585728 , 2678271
-# print(drs_id_from_HDC)
+print(drs_id_from_HDC)
 
 # SET PAGE RANGE
 # ***************
@@ -269,6 +269,7 @@ else:
 # GET PAGE CONTENTS
 # ***************
 
+print("Getting page contents...")
 page_ids = get_text_ids_from_xml(drs_id_from_HDC,page_range)
 # print(page_ids)
 pages = request_txts_from_fds(page_ids)
