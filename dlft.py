@@ -17,9 +17,9 @@ HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/99004381695020
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990033211010203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941'
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941'
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # Scientific Papers of Asa Gray
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
-manual_pagination = False
+manual_pagination = True
 manual_page_start = 5
 manual_page_end = 15
 
@@ -140,6 +140,72 @@ def request_from_iiif_proxy(drs_id,page_range):
     save_cache(CACHE_DICTION)
     return pages
 
+def get_xml_page_from_fds(drs_id):
+    url = 'http://fds.lib.harvard.edu/fds/deliver/' + drs_id
+    params = {}
+
+    unique_id = params_unique_combination(url,params)
+
+    if unique_id in CACHE_DICTION:
+        return CACHE_DICTION[unique_id]
+    else:
+        response_object = requests.get(url)
+        data = response_object.text
+
+        CACHE_DICTION[unique_id] = data
+
+        save_cache(CACHE_DICTION)
+
+        return data
+
+def get_text_ids_from_xml(drs_id,page_range): # input must be single id
+    xml_page = get_xml_page_from_fds(drs_id)
+    soup = BeautifulSoup(xml_page,'xml')
+    tags = soup.find_all('file') # e.g. 'iframe'
+    page_id_list = []
+    for tag in tags:
+        if 'text/plain' in tag['MIMETYPE']:  # e.g. 'src'
+            page_id_list.append(tag.FLocat['xlink:href'])
+            # text_file_ids.append(id)
+    # print(page_ids)
+    page_id_dict = {}
+    for page in page_range:
+        page_id_dict[page] = page_id_list[page-1]
+    return page_id_dict
+
+def request_txts_from_fds(page_ids): # input must be dictionary whose keys are page numbers and values are DRS ids for FDS txt files
+
+    pages = {}
+
+    for page_number in tqdm(sorted(list(page_ids.keys()))):
+        successful = False
+        while not successful:
+
+            url = "http://fds.lib.harvard.edu/fds/deliver/" + page_ids[page_number]
+            params = {}
+
+            unique_id = params_unique_combination(url,params)
+
+            if unique_id in CACHE_DICTION:
+                data = CACHE_DICTION[unique_id]
+                successful = True
+
+            else:
+                response_object = requests.get(url)
+                data = response_object.text
+
+                if 'DOCTYPE' in data:
+                    print("\nPage {} (id: {} ) returned html".format(str(page_number),page_ids[page_number]))
+                else:
+                    successful = True
+                    CACHE_DICTION[unique_id] = data
+
+        pages[page_number] = data
+
+    save_cache(CACHE_DICTION)
+
+    return pages
+
 def createFolder(directory):
     try:
         if not os.path.exists(directory):
@@ -147,7 +213,7 @@ def createFolder(directory):
     except OSError:
         print ('Error: Creating directory. ' +  directory)
 
-def name_to_filestring(title):
+def name_to_filestring(title,page_range):
     filestring = ''
     exclude = string.punctuation + string.whitespace
     for char in title:
@@ -157,18 +223,19 @@ def name_to_filestring(title):
             filestring += char
     if len(filestring) > 50:
         filestring = filestring[0:50]
+    filestring = "{}_pp_{}-{}".format(filestring,min(page_range),max(page_range))
     return filestring
 
-def create_numeric_name(drs_id):
+def create_numeric_name(drs_id,page_range):
     t = str(datetime.datetime.now()).split('.')[0]
     filestring = drs_id + " " + t
-    filestring = name_to_filestring(filestring)
+    filestring = name_to_filestring(filestring,page_range)
     return filestring
 
 def txt_file_plain(pages,filestring):
     text = ''
-    for page in pages:
-        ocr = page['page']['text']
+    for page in sorted(list(pages.keys())):
+        ocr = pages[page]
         text += ocr
     filename = 'Results/' + filestring + '.txt'
     file_obj = open(filename,'w',encoding='utf-8')
@@ -187,7 +254,7 @@ iiif_manifest_link = manifest_string[len(unique_string):].strip("('')")
 drs_id_from_HDC = iiif_manifest_link.split(':')[-1]   # e.g. 2585728 , 2678271
 # print(drs_id_from_HDC)
 
-# GET PAGE COUNT
+# SET PAGE RANGE
 # ***************
 
 if manual_pagination == True:
@@ -202,17 +269,20 @@ else:
 # GET PAGE CONTENTS
 # ***************
 
-pages = request_from_iiif_proxy(drs_id_from_HDC,page_range)
+page_ids = get_text_ids_from_xml(drs_id_from_HDC,page_range)
+# print(page_ids)
+pages = request_txts_from_fds(page_ids)
 
 # OUTPUT FILE
 # ***************
 
 createFolder('./Results/')
-filestring = name_to_filestring(pages[0]['page']['displaylabel'])
+displaylabel = request_from_iiif_proxy(drs_id_from_HDC,range(1,2))[0]['page']['displaylabel']
+filestring = name_to_filestring(displaylabel,page_range)
 print("Creating text file from OCR...")
 try:
     txt_file_plain(pages,filestring)
 except:
-    filestring = create_numeric_name(drs_id_from_HDC)
+    filestring = create_numeric_name(drs_id_from_HDC,page_range)
     txt_file_plain(pages,filestring)
 print("Done! Check Results folder.")
