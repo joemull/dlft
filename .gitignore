@@ -10,3 +10,7 @@ cache.json
 Results/Unattached_women_on_relief_in_Chicago__1937.json
 dev_notes/HDCText.py
 dev_notes/dlftBenchmarking.py
+testing/dlft-fds.py
+testing/dlft-iiif.py
+testing/dlftBenchmarking.py
+testing/HDCText.py
