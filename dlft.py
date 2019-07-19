@@ -11,7 +11,7 @@ import time
 # INPUT
 # **********************
 
-HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # 40 pages - 6 seconds
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # 40 pages - 6 seconds
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941' # 55 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990058808400203941' # 124 pages
