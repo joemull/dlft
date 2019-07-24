@@ -50,23 +50,6 @@ def save_cache(CACHE_DICTION):
     fileRef.write(data_json)
     fileRef.close()
 
-    def read_HDC_page(url): # input is single url
-        params = {}
-
-        unique_id = params_unique_combination(url,params)
-
-        if unique_id in CACHE_DICTION:
-            return CACHE_DICTION[unique_id]
-        else:
-            response_object = requests.get(url)
-            data = response_object.text
-
-            CACHE_DICTION[unique_id] = data
-
-            save_cache(CACHE_DICTION)
-
-            return data
-
 def read_HDC_page(url): # input is single url
     params = {}
 
