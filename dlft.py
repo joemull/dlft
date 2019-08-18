@@ -12,13 +12,14 @@ import time
 # **********************
 
 
-# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # 40 pages - 6 seconds
-HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990004541160203941' # 44 pages
+HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990043816950203941' # 40 pages - 6 seconds
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990004541160203941' # 44 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990026755530203941' # 55 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990025480470203941' # 84 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990058808400203941' # 124 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990003349590203941' # 305 pages
 # HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990014230180203941' # 900 pages - 3 minutes
+# HDC_url = 'https://digitalcollections.library.harvard.edu/catalog/990060877200203941'
 
 manual_pagination = False
 manual_page_start = 5
@@ -271,4 +272,4 @@ try:
 except:
     filestring = create_numeric_name(drs_id_from_HDC,page_range)
     txt_file_plain(pages,filestring)
-print("Done! Check Results folder.")
+print("Done!")
